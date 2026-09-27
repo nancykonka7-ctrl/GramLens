@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GramLens | Rural Development Transparency</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+        Gram<span>Lens</span>
+    </div>
+
+    <div class="nav-right">
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <button onclick="showPage('home')" data-i18n="home">
+                    🏠 Home
+                </button>
+            </li>
+
+            <li>
+                <button onclick="showPage('village')" data-i18n="explore">
+                    🔎 Explore Village
+                </button>
+            </li>
+
+            <li>
+                <button onclick="showPage('report')" data-i18n="report">
+                    ⚠️ Report Problem
+                </button>
+            </li>
+
+            <li>
+                <button onclick="showPage('track')" data-i18n="track">
+                    📋 Track Complaint
+                </button>
+            </li>
+
+            <li>
+                <button onclick="showPage('officer')" data-i18n="government">
+                    🏛️ Government Portal
+                </button>
+            </li>
+
+        </ul>
+
+        <select
+            id="languageSelect"
+            class="language-select"
+            onchange="changeLanguage(this.value)">
+
+            <option value="en">English</option>
+            <option value="te">తెలుగు</option>
+            <option value="hi">हिन्दी</option>
+            <option value="gu">ગુજરાતી</option>
+
+        </select>
+
+        <div class="mobile-menu" onclick="toggleMenu()">
+            ☰
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HOME PAGE ================= -->
+
+<section class="page active" id="home">
+
+    <div class="hero">
+
+        <div class="hero-content">
+
+            <h1>
+
+                <span data-i18n="heroTitle1">
+                    See Rural Development.
+                </span>
+
+                <span data-i18n="heroTitle2">
+                    Track Every Rupee.
+                </span>
+
+            </h1>
+
+            <p data-i18n="heroDescription">
+                A transparent digital platform where citizens and
+                government can see rural development, track funds,
+                monitor projects and safely report problems.
+            </p>
+
+            <div class="hero-buttons">
+
+                <button
+                    class="btn btn-green"
+                    onclick="showPage('village')"
+                    data-i18n="exploreVillage">
+
+                    🔎 Explore My Village
+
+                </button>
+
+                <button
+                    class="btn btn-red"
+                    onclick="showPage('report')"
+                    data-i18n="reportProblem">
+
+                    ⚠️ Report a Problem
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- HOW IT WORKS -->
+
+    <div class="section">
+
+        <div class="section-title">
+
+            <h2 data-i18n="howWorks">
+                How GramLens Works
+            </h2>
+
+            <p data-i18n="howWorksDesc">
+                One transparent platform connecting citizens,
+                rural development data and government monitoring.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">🏠</div>
+
+                <h3 data-i18n="feature1Title">
+                    Explore Rural Development
+                </h3>
+
+                <p data-i18n="feature1Desc">
+                    Citizens can explore villages and view
+                    development activities in their area.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">💰</div>
+
+                <h3 data-i18n="feature2Title">
+                    Track Every Fund
+                </h3>
+
+                <p data-i18n="feature2Desc">
+                    View allocated, released and utilized
+                    development funds for greater transparency.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">📊</div>
+
+                <h3 data-i18n="feature3Title">
+                    Monitor Projects
+                </h3>
+
+                <p data-i18n="feature3Desc">
+                    Monitor project progress, completion status
+                    and development performance.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🔒</div>
+
+                <h3 data-i18n="feature4Title">
+                    Safely Report Problems
+                </h3>
+
+                <p data-i18n="feature4Desc">
+                    Citizens can report development problems
+                    with photographs and location evidence.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- CITIZEN + GOVERNMENT -->
+
+    <div class="section" style="background:white;">
+
+        <div class="section-title">
+
+            <h2 data-i18n="builtFor">
+                Built for Citizens and Government
+            </h2>
+
+            <p data-i18n="builtForDesc">
+                GramLens creates a shared view of rural development
+                while protecting citizen privacy.
+            </p>
+
+        </div>
+
+
+        <div class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">👥</div>
+
+                <h3 data-i18n="citizenParticipation">
+                    Citizen Participation
+                </h3>
+
+                <p data-i18n="citizenParticipationDesc">
+                    Citizens can view development information
+                    and participate by reporting problems.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🏛️</div>
+
+                <h3 data-i18n="governmentMonitoring">
+                    Government Monitoring
+                </h3>
+
+                <p data-i18n="governmentMonitoringDesc">
+                    Government officers can monitor projects,
+                    funds and citizen complaints from one dashboard.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">📷</div>
+
+                <h3 data-i18n="evidenceReports">
+                    Evidence Based Reports
+                </h3>
+
+                <p data-i18n="evidenceReportsDesc">
+                    Upload photographs, videos and GPS location
+                    to provide useful evidence about problems.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">🔍</div>
+
+                <h3 data-i18n="publicTransparency">
+                    Public Transparency
+                </h3>
+
+                <p data-i18n="publicTransparencyDesc">
+                    Development information is presented in a
+                    simple format that citizens can understand.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= VILLAGE PAGE ================= -->
+
+<section class="page" id="village">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2 data-i18n="exploreYourVillage">
+                🔎 Explore Your Village
+            </h2>
+
+            <p data-i18n="selectLocation">
+                Select your location to see rural development,
+                funds and projects.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH PANEL -->
+
+        <div class="search-panel">
+
+            <div class="form-grid">
+
+                <div class="form-group">
+
+                    <label data-i18n="state">
+                        State
+                    </label>
+
+                    <select
+                        id="stateSelect"
+                        onchange="loadDistricts()">
+
+                        <option value="">
+                            Select State
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-i18n="district">
+                        District
+                    </label>
+
+                    <select
+                        id="districtSelect"
+                        onchange="loadVillages()"
+                        disabled>
+
+                        <option value="">
+                            Select District
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label data-i18n="village">
+                        Village
+                    </label>
+
+                    <select
+                        id="villageSelect"
+                        disabled>
+
+                        <option value="">
+                            Select Village
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="btn btn-green"
+                onclick="showVillageDashboard()"
+                data-i18n="viewDevelopment">
+
+                View Rural Development
+
+            </button>
+
+        </div>
+
+
+        <!-- VILLAGE DASHBOARD -->
+
+        <div
+            class="village-dashboard"
+            id="villageDashboard">
+
+            <div class="dashboard-header">
+
+                <h2 id="selectedVillageName">
+                    Village Development
+                </h2>
+
+                <p id="selectedVillageLocation">
+                    District, State
+                </p>
+
+            </div>
+
+
+            <!-- FUND STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <small>
+                        Total Allocated
+                    </small>
+
+                    <h3 id="allocatedAmount">
+                        ₹0
+                    </h3>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <small>
+                        Funds Released
+                    </small>
+
+                    <h3 id="releasedAmount">
+                        ₹0
+                    </h3>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <small>
+                        Funds Utilized
+                    </small>
+
+                    <h3 id="utilizedAmount">
+                        ₹0
+                    </h3>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <small>
+                        Development Status
+                    </small>
+
+                    <h3>
+                        68%
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECTS -->
+
+            <div class="projects-table">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Project
+                            </th>
+
+                            <th>
+                                Allocated
+                            </th>
+
+                            <th>
+                                Progress
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Village Road Development
+                            </td>
+
+                            <td>
+                                ₹8 Lakh
+                            </td>
+
+                            <td>
+
+                                <div class="progress">
+
+                                    <div
+                                        class="progress-bar"
+                                        style="width:80%;">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status status-progress">
+                                    In Progress
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Drinking Water Project
+                            </td>
+
+                            <td>
+                                ₹5 Lakh
+                            </td>
+
+                            <td>
+
+                                <div class="progress">
+
+                                    <div
+                                        class="progress-bar"
+                                        style="width:100%;">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status status-complete">
+                                    Completed
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Government School Improvement
+                            </td>
+
+                            <td>
+                                ₹7 Lakh
+                            </td>
+
+                            <td>
+
+                                <div class="progress">
+
+                                    <div
+                                        class="progress-bar"
+                                        style="width:55%;">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status status-progress">
+                                    In Progress
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Health Centre Development
+                            </td>
+
+                            <td>
+                                ₹5 Lakh
+                            </td>
+
+                            <td>
+
+                                <div class="progress">
+
+                                    <div
+                                        class="progress-bar"
+                                        style="width:25%;">
+                                    </div>
+
+                                </div>
+
+                            </td>
+
+                            <td>
+
+                                <span class="status status-pending">
+                                    Pending
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h2>
+        Gram<span style="color:#ffd34d;">Lens</span>
+    </h2>
+
+    <p>
+        Rural Development Transparency Platform
+    </p>
+
+    <p>
+        Connecting Citizens, Communities and Government
+    </p>
+
+    <p style="margin-top:20px;">
+        © 2026 GramLens. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
